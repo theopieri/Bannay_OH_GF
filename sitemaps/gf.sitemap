@@ -1,0 +1,228 @@
+sitemap gf label="gf" {
+
+    /*Frame label="Now" {
+                //Switch item=Night_State label="Phase of Day" mappings=[OFF="Tag", ON="Nacht"]
+                Text item=Day_Phase icon="sunmoon"
+                //Text item=Current_DateTime
+                Text item=Sunrise_Time icon="sunrise" visibility=[Night_State == ON]
+                Text item=Sunset_Time icon="sunset" visibility=[Night_State == OFF]
+                Text item=Sun_Elevation icon="sunmoon" visibility=[Sun_Elevation > 0]
+                Text item=Moon_Elevation icon="sunmoon" visibility=[Moon_Elevation > 0]
+                Text item=Zodiac_Sign icon="zodiac"
+                Text item=Moon_Phase
+                Text item=Moon_Next_Full icon="fullmoon"
+                    visibility=[Moon_Phase == WAXING_CRESCENT,
+                        Moon_Phase == FIRST_QUARTER,
+                        Moon_Phase == WAXING_GIBBOUS,
+                        Moon_Phase == FULL]
+                Text item=Moon_Next_New icon="fullmoon"
+                    visibility=[Moon_Phase == WANING_GIBBOUS,
+                        Moon_Phase == THIRD_QUARTER,
+                        Moon_Phase == WANING_CRESCENT,
+                        Moon_Phase == NEW]
+            }
+    
+    
+    
+    */
+    
+    Frame label="Banay-GF-House" {
+        Group item=All
+        Group item=AcsGF{
+            
+            Switch item=AC1On
+            Selection item=AC1Mode mappings=[cool="Cool"
+                                          ,heat="Heat"
+                                          ,dry="Dry"
+                                          ,fan= "Fan"
+                                          //,auto="Auto"
+                                          ] visibility=[AC1On==ON]
+            Selection item=AC1Fan mappings=[l="Low"
+                                            ,m="Medium"
+                                            ,h="High"
+                                            ,t= "Top"
+                                            ,a="Auto"
+                                            ] visibility=[AC1On==ON]
+            Setpoint item=AC1Set minValue=16 maxValue=33 visibility=[AC1On==ON]
+            Text item=AC1Temp visibility=[AC1On==ON]
+                              //labelcolor=[>=25="orange", >=15="green", 0="white", <15="blue"] 
+                               valuecolor=[>=25="orange", >=15="green", 0="white", <15="blue"]
+        
+            Switch item=AC2On
+            Selection item=AC2Mode mappings=[cool="Cool"
+                                          ,heat="Heat"
+                                          ,dry="Dry"
+                                          ,fan= "Fan"
+                                          //,auto="Auto"
+                                          ] visibility=[AC2On==ON]
+            Selection item=AC2Fan mappings=[l="Low"
+                                            ,m="Medium"
+                                            ,h="High"
+                                            ,t= "Top"
+                                            ,a="Auto"
+                                            ] visibility=[AC2On==ON]
+            Setpoint item=AC2Set minValue=16 maxValue=33 visibility=[AC2On==ON]
+            Text item=AC2Temp visibility=[AC2On==ON]
+                              //labelcolor=[>=25="orange", >=15="green", 0="white", <15="blue"] 
+                               valuecolor=[>=25="orange", >=15="green", 0="white", <15="blue"]
+            /*
+            Switch item=AC3On
+            Selection item=AC3Mode mappings=[cool="Cool"
+                                          ,heat="Heat"
+                                          ,dry="Dry"
+                                          ,fan= "Fan"
+                                          //,auto="Auto"
+                                          ] visibility=[AC3On==ON]
+            Selection item=AC3Fan mappings=[l="Low"
+                                            ,m="Medium"
+                                            ,h="High"
+                                            ,t= "Top"
+                                            ,a="Auto"
+                                            ] visibility=[AC3On==ON]
+            Setpoint item=AC3Set minValue=16 maxValue=33 visibility=[AC3On==ON]
+            Text item=AC3Temp visibility=[AC3On==ON]
+                              //labelcolor=[>=25="orange", >=15="green", 0="white", <15="blue"] 
+                               valuecolor=[>=25="orange", >=15="green", 0="white", <15="blue"]
+            */
+            Switch item=AC4On
+            Selection item=AC4Mode mappings=[cool="Cool"
+                                          ,heat="Heat"
+                                          ,dry="Dry"
+                                          ,fan= "Fan"
+                                          //,auto="Auto"
+                                          ] visibility=[AC4On==ON]
+            Selection item=AC4Fan mappings=[l="Low"
+                                            ,m="Medium"
+                                            ,h="High"
+                                            ,t= "Top"
+                                            ,a="Auto"
+                                            ] visibility=[AC4On==ON]
+            Setpoint item=AC4Set minValue=16 maxValue=33 visibility=[AC4On==ON]
+            Text item=AC4Temp visibility=[AC4On==ON]
+                              //labelcolor=[>=25="orange", >=15="green", 0="white", <15="blue"] 
+                               valuecolor=[>=25="orange", >=15="green", 0="white", <15="blue"]
+            /*
+            Switch item=AC5On
+            Selection item=AC5Mode mappings=[cool="Cool"
+                                          ,heat="Heat"
+                                          ,dry="Dry"
+                                          ,fan= "Fan"
+                                          //,auto="Auto"
+                                          ] visibility=[AC5On==ON]
+            Selection item=AC5Fan mappings=[l="Low"
+                                            ,m="Medium"
+                                            ,h="High"
+                                            ,t= "Top"
+                                            ,a="Auto"
+                                            ] visibility=[AC5On==ON]
+            Setpoint item=AC5Set minValue=16 maxValue=33 visibility=[AC5On==ON]
+            Text item=AC5Temp visibility=[AC5On==ON]
+                              //labelcolor=[>=25="orange", >=15="green", 0="white", <15="blue"] 
+                               valuecolor=[>=25="orange", >=15="green", 0="white", <15="blue"]
+            */
+            Switch item=AC6On
+            Selection item=AC6Mode mappings=[cool="Cool"
+                                          ,heat="Heat"
+                                          ,dry="Dry"
+                                          ,fan= "Fan"
+                                          //,auto="Auto"
+                                          ] visibility=[AC6On==ON]
+            Selection item=AC6Fan mappings=[l="Low"
+                                            ,m="Medium"
+                                            ,h="High"
+                                            ,t= "Top"
+                                            ,a="Auto"
+                                            ] visibility=[AC6On==ON]
+            Setpoint item=AC6Set minValue=16 maxValue=33 visibility=[AC6On==ON]
+            Text item=AC6Temp visibility=[AC6On==ON]
+                              //labelcolor=[>=25="orange", >=15="green", 0="white", <15="blue"] 
+                               valuecolor=[>=25="orange", >=15="green", 0="white", <15="blue"]
+
+            Switch item=AC7On
+            Selection item=AC7Mode mappings=[cool="Cool"
+                                          ,heat="Heat"
+                                          ,dry="Dry"
+                                          ,fan= "Fan"
+                                          //,auto="Auto"
+                                          ] visibility=[AC7On==ON]
+            Selection item=AC7Fan mappings=[l="Low"
+                                            ,m="Medium"
+                                            ,h="High"
+                                            ,t= "Top"
+                                            ,a="Auto"
+                                            ] visibility=[AC7On==ON]
+            Setpoint item=AC7Set minValue=16 maxValue=33 visibility=[AC7On==ON]
+            Text item=AC7Temp visibility=[AC7On==ON]
+                              //labelcolor=[>=25="orange", >=15="green", 0="white", <15="blue"] 
+                               valuecolor=[>=25="orange", >=15="green", 0="white", <15="blue"]       
+        
+        }
+        //Group item=Stairs
+        //Group item=All
+        //Group item=Spare
+        //Group item=Astro
+        Group item=Ser
+        //Group item=Sensors
+        Group item=Gf {
+            //Group item=Gf 
+            
+            Group item=Gf0{  
+                            Group item=GfKit
+                            Group item=GfLiv
+                            Group item=GfDin
+                            Group item=GfBed1
+                            Group item=GfBath1
+                            Group item=GfBed2
+                            Group item=GfBath2
+                            Group item=GfLaun
+                            
+            }
+            Group item=Gf1{
+                            //Group item=Gf1Kit
+                            Group item=Gf1Liv
+                            Group item=Gf1Bed
+                            Group item=Gf1Bath
+            }
+            Group item=Gf2{
+                            Group item=Gf2Bed
+                            Group item=Gf2Bath
+            }
+            //Group item=GfOut
+            Group item=GfPool
+            Group item=GfParking
+            Group item=GfGardFront
+            Group item=GfGardBack
+            Group item=GfVeranda
+            //Switch		item=MasterGfOut mappings=[OFF="All Off", ON="All On"]
+            //Switch	item=MasterGfOut mappings=[OFF="All Off", ON="All On"] icon="light"
+            
+        }
+        Group item=param{
+            Frame label="PIR DURATION"{
+            Selection item=timerDurgPir1 mappings=[0.0="DISABLE",1.0="2min",2.0="3mins",4.0="5mins",9.0="10mins", 14.0="15mins", 19.0="20mins", 59.0="1Hour"]
+            Selection item=timerDurgPir2 mappings=[0.0="DISABLE",1.0="2min",2.0="3mins",4.0="5mins",9.0="10mins", 14.0="15mins", 19.0="20mins", 59.0="1Hour"]
+            Selection item=timerDurgPir3 mappings=[0.0="DISABLE",1.0="2min",2.0="3mins",4.0="5mins",9.0="10mins", 14.0="15mins", 19.0="20mins", 59.0="1Hour"]
+            Selection item=timerDurgPir4 mappings=[0.0="DISABLE",1.0="2min",2.0="3mins",4.0="5mins",9.0="10mins", 14.0="15mins", 19.0="20mins", 59.0="1Hour"]
+            }
+            Frame label="OUTDOOR LIGHTS"{
+            
+            Selection item=timerHours1  mappings=[0.0="00", 1.0="01", 2.0="02", 3.0="03", 4.0="04", 5.0="05", 6.0="06", 7.0="07", 8.0="08", 9.0="09", 10.0="10",
+             11.0="11", 12.0="12", 13.0="13", 14.0="14", 15.0="15", 16.0="16", 17.0="17", 18.0="18", 19.0="19", 20.0="20", 21.0="21", 22.0="22", 23.0="23"]
+            Selection item=timerMinues1 mappings=[0.0="00", 10.0="10", 20.0="20", 30.0="30", 40.0="40", 50.0="50"]
+            
+            Selection item=timerHours2  mappings=[0.0="00", 1.0="01", 2.0="02", 3.0="03", 4.0="04", 5.0="05", 6.0="06", 7.0="07", 8.0="08", 9.0="09", 10.0="10",
+             11.0="11", 12.0="12", 13.0="13", 14.0="14", 15.0="15", 16.0="16", 17.0="17", 18.0="18", 19.0="19", 20.0="20", 21.0="21", 22.0="22", 23.0="23"]
+            Selection item=timerMinues2 mappings=[0.0="00", 10.0="10", 20.0="20", 30.0="30", 40.0="40", 50.0="50"]
+                        
+            Switch item=vaOutdoorLights
+            }
+            Frame label="Rec. Water Frequency"{
+            Selection item=vaRecWaterCancel mappings=[0.0="DISABLE",15.0="15min",30.0="30mins",60.0="1Hour"]
+        }
+        }
+        
+
+    }
+
+}
+    

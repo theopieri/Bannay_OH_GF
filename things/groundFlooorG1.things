@@ -1,0 +1,43 @@
+Bridge enocean:bridge:ftdig1 "FTDI-GF1"[path="/dev/ttyUSB_DEVICE_FTDI_GF_1",espVersion="ESP2",rs485BaseId="00003180",rs485=true]{
+   //3180
+   Thing centralCommand g1dm1 "G1/FUD14/1" @ "DIMMER"         [ enoceanId="00000005", senderIdOffset=1, sendingEEPId="A5_38_08_02", receivingEEPId="A5_38_08_02", broadcastMessages=true, suppressRepeating=false ]
+   Thing centralCommand g1dm2 "G1/FUD14/2" @ "DIMMER"         [ enoceanId="00000006", senderIdOffset=2, sendingEEPId="A5_38_08_02", receivingEEPId="A5_38_08_02", broadcastMessages=true, suppressRepeating=false ]
+   Thing centralCommand g1dm3 "G1/FUD14/3" @ "DIMMER"         [ enoceanId="00000007", senderIdOffset=3, sendingEEPId="A5_38_08_02", receivingEEPId="A5_38_08_02", broadcastMessages=true, suppressRepeating=false ]
+   Thing centralCommand g1dm4 "G1/FUD14/4" @ "DIMMER"         [ enoceanId="00000008", senderIdOffset=4, sendingEEPId="A5_38_08_02", receivingEEPId="A5_38_08_02", broadcastMessages=true, suppressRepeating=false ]
+   
+   Thing centralCommand g1cc01 "G1/FSR4X-1A" @ "ON-OFF-LIGHT" [ enoceanId="00000009", senderIdOffset=5, sendingEEPId="A5_38_08_01", receivingEEPId="F6_00_00", broadcastMessages=true, suppressRepeating=false ] 
+   Thing centralCommand g1cc02 "G1/FSR4X-1B" @ "ON-OFF-LIGHT" [ enoceanId="0000000A", senderIdOffset=6, sendingEEPId="A5_38_08_01", receivingEEPId="F6_00_00", broadcastMessages=true, suppressRepeating=false ] 
+   Thing centralCommand g1cc03 "G1/FSR4X-1C" @ "ON-OFF-LIGHT" [ enoceanId="0000000B", senderIdOffset=7, sendingEEPId="A5_38_08_01", receivingEEPId="F6_00_00", broadcastMessages=true, suppressRepeating=false ] 
+   Thing centralCommand g1cc04 "G1/FSR4X-1D" @ "ON-OFF-LIGHT" [ enoceanId="0000000C", senderIdOffset=8, sendingEEPId="A5_38_08_01", receivingEEPId="F6_00_00", broadcastMessages=true, suppressRepeating=false ] 
+
+   Thing centralCommand g1cc05 "G1/FSR4X-2A" @ "ON-OFF-LIGHT" [ enoceanId="0000000D", senderIdOffset=9, sendingEEPId="A5_38_08_01", receivingEEPId="F6_00_00", broadcastMessages=true, suppressRepeating=false ] 
+   Thing centralCommand g1cc06 "G1/FSR4X-2B" @ "ON-OFF-LIGHT" [ enoceanId="0000000E", senderIdOffset=10, sendingEEPId="A5_38_08_01", receivingEEPId="F6_00_00", broadcastMessages=true, suppressRepeating=false ] 
+   Thing centralCommand g1cc07 "G1/FSR4X-2C" @ "ON-OFF-LIGHT" [ enoceanId="0000000F", senderIdOffset=11, sendingEEPId="A5_38_08_01", receivingEEPId="F6_00_00", broadcastMessages=true, suppressRepeating=false ] 
+   Thing centralCommand g1cc08 "G1/FSR4X-2D" @ "ON-OFF-LIGHT" [ enoceanId="00000010", senderIdOffset=12, sendingEEPId="A5_38_08_01", receivingEEPId="F6_00_00", broadcastMessages=true, suppressRepeating=false ] 
+
+   Thing centralCommand g1cc09 "G1/FSR4X-3A" @ "ON-OFF-LIGHT" [ enoceanId="00000011", senderIdOffset=13, sendingEEPId="A5_38_08_01", receivingEEPId="F6_00_00", broadcastMessages=true, suppressRepeating=false ] 
+   Thing centralCommand g1cc10 "G1/FSR4X-3B" @ "ON-OFF-LIGHT" [ enoceanId="00000012", senderIdOffset=14, sendingEEPId="A5_38_08_01", receivingEEPId="F6_00_00", broadcastMessages=true, suppressRepeating=false ] 
+   Thing centralCommand g1cc11 "G1/FSR4X-3C" @ "ON-OFF-LIGHT" [ enoceanId="00000013", senderIdOffset=15, sendingEEPId="A5_38_08_01", receivingEEPId="F6_00_00", broadcastMessages=true, suppressRepeating=false ] 
+   Thing centralCommand g1cc12 "G1/FSR4X-4D" @ "ON-OFF-LIGHT" [ enoceanId="00000014", senderIdOffset=16, sendingEEPId="A5_38_08_01", receivingEEPId="F6_00_00", broadcastMessages=true, suppressRepeating=false ] 
+
+   Thing centralCommand g1cc13 "G1/FSR2X-1A" @ "ON-OFF-FAN"   [ enoceanId="00000015", senderIdOffset=17, sendingEEPId="A5_38_08_01", receivingEEPId="F6_00_00", broadcastMessages=true, suppressRepeating=false ] 
+   Thing centralCommand g1cc14 "G1/FSR2X-1B" @ "ON-OFF-FAN"   [ enoceanId="00000016", senderIdOffset=18, sendingEEPId="A5_38_08_01", receivingEEPId="F6_00_00", broadcastMessages=true, suppressRepeating=false ] 
+   
+   Thing centralCommand g1cc15 "G1/FSR2X-2A" @ "ON-OFF-LAMP"  [ enoceanId="00000017", senderIdOffset=19, sendingEEPId="A5_38_08_01", receivingEEPId="F6_00_00", broadcastMessages=true, suppressRepeating=false ] 
+   Thing centralCommand g1cc16 "G1/FSR2X-2B" @ "ON-OFF-LAMP"  [ enoceanId="00000018", senderIdOffset=20, sendingEEPId="A5_38_08_01", receivingEEPId="F6_00_00", broadcastMessages=true, suppressRepeating=false ] 
+
+   Thing centralCommand g1cc17 "G1/FSR2X-3A" @ "ON-OFF-LAMP"  [ enoceanId="00000019", senderIdOffset=21, sendingEEPId="A5_38_08_01", receivingEEPId="F6_00_00", broadcastMessages=true, suppressRepeating=false ] 
+   Thing centralCommand g1cc18 "G1/FSR2X-3B" @ "ON-OFF-LAMP"  [ enoceanId="0000001A", senderIdOffset=22, sendingEEPId="A5_38_08_01", receivingEEPId="F6_00_00", broadcastMessages=true, suppressRepeating=false ] 
+
+   Thing centralCommand g1cc19 "G1/FSR2X-4A" @ "ON-OFF-TOWER" [ enoceanId="0000001B", senderIdOffset=23, sendingEEPId="A5_38_08_01", receivingEEPId="F6_00_00", broadcastMessages=true, suppressRepeating=false ] 
+   Thing centralCommand g1cc20 "G1/FSR2X-4B" @ "ON-OFF-TOWER" [ enoceanId="0000001C", senderIdOffset=24, sendingEEPId="A5_38_08_01", receivingEEPId="F6_00_00", broadcastMessages=true, suppressRepeating=false ] 
+
+   Thing rollershutter g1rh1   "G1/FSB14-1A" @ "MOTOR-UP-DOWN"  [ enoceanId="0000001D", senderIdOffset=25, sendingEEPId="A5_3F_7F_EltakoFSB", receivingEEPId="A5_3F_7F_EltakoFSB", pollingInterval=120,broadcastMessages=true, suppressRepeating=false ]
+   Thing rollershutter g1rh2   "G1/FSB14-1B" @ "MOTOR-UP-DOWN"  [ enoceanId="0000001E", senderIdOffset=26, sendingEEPId="A5_3F_7F_EltakoFSB", receivingEEPId="A5_3F_7F_EltakoFSB", pollingInterval=120,broadcastMessages=true, suppressRepeating=false ]
+
+   Thing rollershutter g1rh3   "G1/FSB14-2A" @ "MOTOR-UP-DOWN"  [ enoceanId="0000001F", senderIdOffset=27, sendingEEPId="A5_3F_7F_EltakoFSB", receivingEEPId="A5_3F_7F_EltakoFSB", pollingInterval=120,broadcastMessages=true, suppressRepeating=false ]
+   Thing rollershutter g1rh4   "G1/FSB14-2B" @ "MOTOR-UP-DOWN"  [ enoceanId="00000020", senderIdOffset=28, sendingEEPId="A5_3F_7F_EltakoFSB", receivingEEPId="A5_3F_7F_EltakoFSB", pollingInterval=120,broadcastMessages=true, suppressRepeating=false ]
+   
+   Thing lightTemperatureOccupancySensor g1pir1 "G1/PIR 1" @ "SENSORS"    [ enoceanId="00001981",receivingEEPId="A5_08_01_FXBH"]
+
+}

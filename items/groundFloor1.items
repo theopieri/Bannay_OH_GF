@@ -1,0 +1,45 @@
+//Sensors
+
+Switch g1Pir1  "APT 2 BATH [MAP(pir.map):%s]" <motion>  (All,Gf,Sensors,Gf1Bath) [MotionDetector] {channel="enocean:lightTemperatureOccupancySensor:ftdig1:g1pir1:motionDetection"}
+Number g1luxlev1 "APT 2 BATH [%.1f lx]" <sunrise> (All,Gf,Sensors,Gf1Bath) {channel="enocean:lightTemperatureOccupancySensor:ftdig1:g1pir1:illumination"}
+
+//Dimmers
+Dimmer g1dimmer1 "Bed Spot [%.0f ]" <slider> (All,Gf,Gf1Bed) [Light]  {channel="enocean:centralCommand:ftdig1:g1dm1:dimmer"}
+Dimmer g1dimmer2 "Bath Spot [%.0f ]" <slider> (All,Gf,Gf1Bath) [Light]  {channel="enocean:centralCommand:ftdig1:g1dm2:dimmer"}
+Dimmer g1dimmer3 "G1/FUD14/3 [%.0f ]" <slider> (All,Spare) [Light]  {channel="enocean:centralCommand:ftdig1:g1dm3:dimmer"}
+Dimmer g1dimmer4 "Living [%.0f ]" <slider> (All,Gf,Gf1Liv) [Light]  {channel="enocean:centralCommand:ftdig1:g1dm4:dimmer"}
+
+//ON-OFF FSR14-4X
+Switch g1switch1  "G1/FSR4X-1A" <light> (All,Spare)             [Light] {channel="enocean:centralCommand:ftdig1:g1cc01:generalSwitch"} 
+Switch g1switch2  "Bed North Led" <light> (All,Gf,Gf1Bed)       [Light] {channel="enocean:centralCommand:ftdig1:g1cc02:generalSwitch"} 
+Switch g1switch3  "Bed South Led" <light> (All,Gf,Gf1Bed)       [Light] {channel="enocean:centralCommand:ftdig1:g1cc03:generalSwitch"} 
+Switch g1switch4  "Wardrobe" <light> (All,Gf,Gf1Bed)            [Light] {channel="enocean:centralCommand:ftdig1:g1cc04:generalSwitch"} 
+
+Switch g1switch5  "Kitchen Led" <light> (All,Gf1Liv)            [Light] {channel="enocean:centralCommand:ftdig1:g1cc05:generalSwitch"} 
+Switch g1switch6  "G1/FSR4X-2B" <light> (All,Spare)             [Light] {channel="enocean:centralCommand:ftdig1:g1cc06:generalSwitch"} 
+Switch g1switch7  "G1/FSR4X-2C" <light> (All,Spare)             [Light] {channel="enocean:centralCommand:ftdig1:g1cc07:generalSwitch"} 
+Switch g1switch8  "G1/FSR4X-2D" <light> (All,Spare)             [Light] {channel="enocean:centralCommand:ftdig1:g1cc08:generalSwitch"} 
+
+Switch g1switch9  "G1 Veranda" <light> (All,Gf,Gf1Liv,GfOut,GfVeranda)    [Light] {channel="enocean:centralCommand:ftdig1:g1cc09:generalSwitch"} 
+Switch g1switch10 "G1 Entrance" <light> (All,Gf,Gf1Liv,GfOut,GfGardBack)   [Light] {channel="enocean:centralCommand:ftdig1:g1cc10:generalSwitch"} 
+Switch g1switch11 "G1/FSR4X-3C" <light> (All,Spare)             [Light] {channel="enocean:centralCommand:ftdig1:g1cc11:generalSwitch"} 
+Switch g1switch12 "G1/FSR4X-3D" <light> (All,Spare)             [Light] {channel="enocean:centralCommand:ftdig1:g1cc12:generalSwitch"} 
+
+// ON-OFF FSR14-2X
+Switch g1switch13 "Fan Bed SP1" <fan> (All,Gf,Gf1Bed)           [Light] {channel="enocean:centralCommand:ftdig1:g1cc13:generalSwitch"} 
+Switch g1switch14 "Fan Bed SP2" <fan> (All,Spare)           [Light] {channel="enocean:centralCommand:ftdig1:g1cc14:generalSwitch"} 
+
+Switch g1switch15 "BED Lamp Right"  <poweroutlet_uk> (All,Gf,Gf1Bed) [Light] {channel="enocean:centralCommand:ftdig1:g1cc15:generalSwitch"} 
+Switch g1switch16 "BED Lamp Left" <poweroutlet_uk> (All,Gf,Gf1Bed)   [Light] {channel="enocean:centralCommand:ftdig1:g1cc16:generalSwitch"} 
+
+Switch g1switch17 "G1/FSR2X-3A "  <poweroutlet_uk> (All,Spare)       [Light] {channel="enocean:centralCommand:ftdig1:g1cc17:generalSwitch"} 
+Switch g1switch18 "G1/FSR2X-3B " <poweroutlet_uk> (All,Spare)        [Light] {channel="enocean:centralCommand:ftdig1:g1cc18:generalSwitch"} 
+
+Switch g1switch19 "Bath Towel"  <radiator> (All,Gf,Gf1Bath)           [HVAC] {channel="enocean:centralCommand:ftdig1:g1cc19:generalSwitch"} 
+Switch g1switch20 "G1/FSR2X-4B" <radiator> (All,Spare)                [HVAC] {channel="enocean:centralCommand:ftdig1:g1cc20:generalSwitch"} 
+
+Rollershutter g1motor1 "Living Left[%s]" (All,Gf,Gf1Bed)                  [Blinds] {channel="enocean:rollershutter:ftdig1:g1rh1:rollershutter"}
+Rollershutter g1motor2 "Living Right[%s]" (All,Gf,Gf1Bed)                  [Blinds] {channel="enocean:rollershutter:ftdig1:g1rh2:rollershutter"}
+
+Rollershutter g1motor3 "Kitchen [%s]" (All,Gf,Gf1Bed)                  [Blinds] {channel="enocean:rollershutter:ftdig1:g1rh3:rollershutter"}
+Rollershutter g1motor4 "BED [%s]" (All,Gf,Gf1Bed)                  [Blinds] {channel="enocean:rollershutter:ftdig1:g1rh4:rollershutter"}

@@ -1,0 +1,187 @@
+//Remote Openhab
+Switch sdoor "Lift To GF HOUSE"  <door> (Ser){ channel="remoteopenhab:server:ohff:sswitch1" }
+Switch sdoor2 "APT 2" <door> (Ser){ channel="remoteopenhab:server:ohff:sswitch2" }
+Switch sdoor3 "APT 3" <door> (Ser){ channel="remoteopenhab:server:ohff:sswitch3" }
+Switch sdoor8 "APT 1 Entrance" <door> (Ser){ channel="remoteopenhab:server:ohff:sswitch8" }
+Switch sdoor9 "APT 2 Entrance" <door> (Ser){ channel="remoteopenhab:server:ohff:sswitch9" }
+Switch sdoor10 "APT 3 Entrance" <door> (Ser){ channel="remoteopenhab:server:ohff:sswitch10" }
+Switch sdoor14 "Ped Gate" <door> (Ser){ channel="remoteopenhab:server:ohff:sswitch14" }
+Switch sdoor16 "Car slide door" <door> (Ser){ channel="remoteopenhab:server:ohff:sswitch16" }
+
+Switch gSW1A "Main Entrance TOP Left" (All) {channel="enocean:rockerSwitch:ftdig:gSW1:rockerswitchA"}
+Switch gSW1B "Main Entrance TOP Right" (All) {channel="enocean:rockerSwitch:ftdig:gSW1:rockerswitchB"}
+//Sensors
+Switch gPir1  "Bed 1 Bath [MAP(pir.map):%s]" <motion>  (All,Gf,Sensors,GfBath1) [MotionDetector] {channel="enocean:lightTemperatureOccupancySensor:ftdig:gpir1:motionDetection"}
+Number gluxlev1 "Bed 1 Bath [%.1f lx]" <sunrise> (All,Gf,Sensors,GfBath1) {channel="enocean:lightTemperatureOccupancySensor:ftdig:gpir1:illumination"}
+
+Switch gPir2  "Bed 2 Bath [MAP(pir.map):%s]" <motion>  (All,Gf,Sensors,GfBath2) [MotionDetector] {channel="enocean:lightTemperatureOccupancySensor:ftdig:gpir2:motionDetection"}
+Number gluxlev2 "Bed 2 Bath [%.1f lx]" <sunrise> (All,Gf,Sensors,GfBath2) {channel="enocean:lightTemperatureOccupancySensor:ftdig:gpir2:illumination"}
+
+Switch gPir3  "g3 [MAP(pir.map):%s]" <motion>  (All,Gf,Sensors) [MotionDetector] {channel="enocean:lightTemperatureOccupancySensor:ftdig:gpir3:motionDetection"}
+Switch gPir4  "g4 [MAP(pir.map):%s]" <motion>  (All,Gf,Sensors) [MotionDetector] {channel="enocean:lightTemperatureOccupancySensor:ftdig:gpir4:motionDetection"}
+Switch gPir5  "g5 [MAP(pir.map):%s]" <motion>  (All,Gf,Sensors) [MotionDetector] {channel="enocean:lightTemperatureOccupancySensor:ftdig:gpir5:motionDetection"}
+
+//Dimmers
+Dimmer gdimmer1 "Bed 1 W.C Spot [%.0f ]" <slider> (All,Gf,GfBath1) [Light]  {channel="enocean:centralCommand:ftdig:gdm1:dimmer"}
+Dimmer gdimmer2 "Bed 1 Spot [%.0f ]" <slider> (All,Gf,GfBed1) [Light]  {channel="enocean:centralCommand:ftdig:gdm2:dimmer"}
+Dimmer gdimmer3 "Bed 1 Wardrobe Spot [%.0f ]" <slider> (All,Gf,GfBed1) [Light]  {channel="enocean:centralCommand:ftdig:gdm3:dimmer"}
+Dimmer gdimmer4 "Bed 2 Spot [%.0f ]" <slider> (All,Gf,GfBed2) [Light]  {channel="enocean:centralCommand:ftdig:gdm4:dimmer"}
+Dimmer gdimmer5 "Bed 2 W.C Spot [%.0f ]" <slider> (All,Gf,GfBath2) [Light]  {channel="enocean:centralCommand:ftdig:gdm5:dimmer"}
+Dimmer gdimmer6 "Living Spot [%.0f ]" <slider> (All,Gf,GfLiv)  [Light]  {channel="enocean:centralCommand:ftdig:gdm6:dimmer"}
+Dimmer gdimmer7 "Dining Spot [%.0f ]" <slider> (All,Gf,GfDin)  [Light]  {channel="enocean:centralCommand:ftdig:gdm7:dimmer"}
+Dimmer gdimmer8 "Kitchen Spot [%.0f ]" <slider> (All,Gf,GfKit) [Light]  {channel="enocean:centralCommand:ftdig:gdm8:dimmer"}
+
+//ON-OFF FSR14-4X
+Switch gswitch1  "Bed 1 Shower" <light> (All,Gf,GfBath1)       [Light] {channel="enocean:centralCommand:ftdig:gcc01:generalSwitch"} 
+Switch gswitch2  "G/FSR4X-1B" <light> (All,Spare)              [Light] {channel="enocean:centralCommand:ftdig:gcc02:generalSwitch"} 
+Switch gswitch3  "G/FSR4X-1C" <light> (All,Spare)              [Light] {channel="enocean:centralCommand:ftdig:gcc03:generalSwitch"} 
+Switch gswitch4  "G/FSR4X-1D" <light> (All,Spare)              [Light] {channel="enocean:centralCommand:ftdig:gcc04:generalSwitch"} 
+
+Switch gswitch5  "Bed 1 Wardrobe Led" <light> (All,Gf,GfBed1)  [Light] {channel="enocean:centralCommand:ftdig:gcc05:generalSwitch"} 
+Switch gswitch6  "Bed 1 Led" <light> (All,Gf,GfBed1)           [Light] {channel="enocean:centralCommand:ftdig:gcc06:generalSwitch"} 
+Switch gswitch7  "G/FSR4X-2C" <light> (All,Spare)              [Light] {channel="enocean:centralCommand:ftdig:gcc07:generalSwitch"} 
+Switch gswitch8  "G/FSR4X-2D" <light> (All,Spare)              [Light] {channel="enocean:centralCommand:ftdig:gcc08:generalSwitch"} 
+
+Switch gswitch9  "Bed 2 Wardrobe Led" <light> (All,Gf,GfBed2)  [Light] {channel="enocean:centralCommand:ftdig:gcc09:generalSwitch"} 
+Switch gswitch10 "Bed 2 Led" <light> (All,Gf,GfBed2)           [Light] {channel="enocean:centralCommand:ftdig:gcc10:generalSwitch"} 
+Switch gswitch11 "G/FSR4X-3C" <light> (All,Spare)              [Light] {channel="enocean:centralCommand:ftdig:gcc11:generalSwitch"} 
+Switch gswitch12 "G/FSR4X-3D" <light> (All,Spare)              [Light] {channel="enocean:centralCommand:ftdig:gcc12:generalSwitch"} 
+
+Switch gswitch13 "Hallway Beds" <light> (All,Gf,GfLaun)        [Light] {channel="enocean:centralCommand:ftdig:gcc13:generalSwitch"} 
+Switch gswitch14 "G/FSR4X-4B" <light> (All,Spare)              [Light] {channel="enocean:centralCommand:ftdig:gcc14:generalSwitch"} 
+Switch gswitch15 "Laundry" <light> (All,Gf,GfLaun)             [Light] {channel="enocean:centralCommand:ftdig:gcc15:generalSwitch"} 
+Switch gswitch16 "Guest W.C" <light> (All,Gf,GfLaun)           [Light] {channel="enocean:centralCommand:ftdig:gcc16:generalSwitch"} 
+
+Switch gswitch17  "Hallwall Entrance" <light> (All,Gf,GfLaun,GfLiv) [Light] {channel="enocean:centralCommand:ftdig:gcc17:generalSwitch"} 
+Switch gswitch18 "G/FSR4X-5B" <light> (All,Spare)             [Light] {channel="enocean:centralCommand:ftdig:gcc18:generalSwitch"} 
+Switch gswitch19 "G/FSR4X-5C" <light> (All,Spare)             [Light] {channel="enocean:centralCommand:ftdig:gcc19:generalSwitch"} 
+Switch gswitch20 "Kitchen Fan Ext" <light> (All,Gf,GfKit)     [Light] {channel="enocean:centralCommand:ftdig:gcc20:generalSwitch"} 
+
+Switch gswitch21 "Living Window Led" <light> (All,Gf,GfLiv)   [Light] {channel="enocean:centralCommand:ftdig:gcc21:generalSwitch"} 
+Switch gswitch22 "Living Led" <light> (All,Gf,GfLiv)          [Light] {channel="enocean:centralCommand:ftdig:gcc22:generalSwitch"} 
+Switch gswitch23 "Dining Window Led" <light> (All,Gf,GfDin)   [Light] {channel="enocean:centralCommand:ftdig:gcc23:generalSwitch"} 
+Switch gswitch24 "G/FSR4X-6D" <light> (All,Spare)             [Light] {channel="enocean:centralCommand:ftdig:gcc24:generalSwitch"} 
+
+Switch gswitch25 "Entrance" <light> (All,Gf,GfOut,GfParking)            [Light] {channel="enocean:centralCommand:ftdig:gcc25:generalSwitch"} 
+Switch gswitch26 "G/FSR4X-7B" <light> (All,Spare)             [Light] {channel="enocean:centralCommand:ftdig:gcc26:generalSwitch"} 
+Switch gswitch27 "Garage" <light> (All,Gf,GfOut,GfParking)              [Light] {channel="enocean:centralCommand:ftdig:gcc27:generalSwitch"} 
+Switch gswitch28 "Bed 1 Veranda" <light> (All,Gf,GfOut,GfBed1,GfGardBack)      [Light] {channel="enocean:centralCommand:ftdig:gcc28:generalSwitch"} 
+
+Switch gswitch29 "Veranda North Spot" <light> (All,Gf,GfLiv,GfOut,GfVeranda) [Light] {channel="enocean:centralCommand:ftdig:gcc29:generalSwitch"} 
+Switch gswitch30 "Veranda South Spot" <light> (All,Gf,GfLiv,GfOut,GfVeranda) [Light] {channel="enocean:centralCommand:ftdig:gcc30:generalSwitch"} 
+Switch gswitch31 "Veranda Led" <light> (All,Gf,GfLiv,GfOut,GfVeranda)        [Light] {channel="enocean:centralCommand:ftdig:gcc31:generalSwitch"} 
+
+Switch gswitch32 "Lift Entance" <light> (All,Gf,GfOut,GfParking)             [Light] {channel="enocean:centralCommand:ftdig:gcc32:generalSwitch"} 
+// ON-OFF FSR14-2X
+Switch gswitch33 "Fan Veranda SP1" <fan> (All,Spare)        [Light] {channel="enocean:centralCommand:ftdig:gcc33:generalSwitch"} 
+Switch gswitch34 "Fan Veranda SPEED" <fan> (All,Gf,GfLiv,GfLiv)        [Light] {channel="enocean:centralCommand:ftdig:gcc34:generalSwitch"} 
+
+Switch gswitch35 "Fan Bed 2 SP1" <fan> (All,Gf,GfBed2)         [Light] {channel="enocean:centralCommand:ftdig:gcc35:generalSwitch"} 
+Switch gswitch36 "Fan Bed 2 SP2" <fan> (All,Spare)         [Light] {channel="enocean:centralCommand:ftdig:gcc36:generalSwitch"} 
+
+Switch gswitch37 "G/FSR2X-3A " <light> (All,Spare)             [Light] {channel="enocean:centralCommand:ftdig:gcc37:generalSwitch"} 
+Switch gswitch38 "Bed 2 Shower" <light> (All,Gf,GfBath2)       [Light] {channel="enocean:centralCommand:ftdig:gcc38:generalSwitch"} 
+
+Switch gswitch39 "West Spike" <light> (All,Gf,GfOut,GfPool)                 [Light] {channel="enocean:centralCommand:ftdig:gcc39:generalSwitch"} 
+Switch gswitch40 "Veranda Spike"  <light> (All,Gf,GfOut,GfVeranda)                 [Light] {channel="enocean:centralCommand:ftdig:gcc40:generalSwitch"} 
+
+Switch gswitch41 "Path Ped Gate Right Spike" <light> (All,Gf,GfOut,GfGardFront)                 [Light] {channel="enocean:centralCommand:ftdig:gcc41:generalSwitch"} 
+Switch gswitch42 "Path Ped Gate Left Spike"  <light> (All,Gf,GfOut,GfGardFront)                 [Light] {channel="enocean:centralCommand:ftdig:gcc42:generalSwitch"} 
+
+Switch gswitch43 "Stairs Veranda Wall Lights" <light> (All,Gf,GfOut,GfVeranda)                 [Light] {channel="enocean:centralCommand:ftdig:gcc43:generalSwitch"} 
+Switch gswitch44 "Door Lift Spike"  <light> (All,Gf,GfOut,GfParking)                 [Light] {channel="enocean:centralCommand:ftdig:gcc44:generalSwitch"} 
+
+Switch gswitch45 "Stairs to APT" <light> (All,Gf,GfOut,GfPool)                 [Light] {channel="enocean:centralCommand:ftdig:gcc45:generalSwitch"} 
+Switch gswitch46 "Pool North Spike"  <light> (All,Gf,GfOut,GfPool)                 [Light] {channel="enocean:centralCommand:ftdig:gcc46:generalSwitch"} 
+
+Switch gswitch47 "APT 2 Spikes" <light> (All,Gf,GfOut,GfGardBack)                 [Light] {channel="enocean:centralCommand:ftdig:gcc47:generalSwitch"} 
+Switch gswitch48 "West Wall Lights"  <light> (All,Gf,GfOut,GfGardBack)                 [Light] {channel="enocean:centralCommand:ftdig:gcc48:generalSwitch"} 
+
+Switch gswitch49 "South wall lights" <light> (All,Gf,GfOut,GfPool)                 [Light] {channel="enocean:centralCommand:ftdig:gcc49:generalSwitch"} 
+Switch gswitch50 "Driveway east stairs"  <light> (All,Gf,GfOut,GfPool)                 [Light] {channel="enocean:centralCommand:ftdig:gcc50:generalSwitch"} 
+
+Switch gswitch51 "Stairs Wall Lights" <light> (All,Gf,GfOut,GfPool)                 [Light] {channel="enocean:centralCommand:ftdig:gcc51:generalSwitch"} 
+Switch gswitch52 "Driveway Wall Light"  <light> (All,Gf,GfOut,GfParking)                 [Light] {channel="enocean:centralCommand:ftdig:gcc52:generalSwitch"} 
+
+Switch gswitch53 "Driveway Spike" <light> (All,Gf,GfOut,GfParking)                 [Light] {channel="enocean:centralCommand:ftdig:gcc53:generalSwitch"} 
+Switch gswitch54 "Wall Lights West North"  <light> (All,Gf,GfOut,GfPool)                 [Light] {channel="enocean:centralCommand:ftdig:gcc54:generalSwitch"} 
+
+Switch gswitch55 "Wall Lights West South" <light> (All,Gf,GfOut,GfPool)                 [Light] {channel="enocean:centralCommand:ftdig:gcc55:generalSwitch"} 
+Switch gswitch56 "Wall Lights East South"  <light> (All,Gf,GfOut,GfPool)                 [Light] {channel="enocean:centralCommand:ftdig:gcc56:generalSwitch"} 
+
+Switch gswitch57 "West Driveway wall lights" <light> (All,Gf,GfOut,GfParking)                 [Light] {channel="enocean:centralCommand:ftdig:gcc57:generalSwitch"} 
+Switch gswitch58 "W.C Wall Lights"  <light> (All,Gf,GfOut,GfPool)                 [Light] {channel="enocean:centralCommand:ftdig:gcc58:generalSwitch"} 
+
+Switch gswitch59 "Out shower" <light> (All,Gf,GfOut,GfPool)                 [Light] {channel="enocean:centralCommand:ftdig:gcc59:generalSwitch"} 
+Switch gswitch60 "W.C Out light"  <light> (All,Gf,GfOut,GfPool)                 [Light] {channel="enocean:centralCommand:ftdig:gcc60:generalSwitch"} 
+
+Switch gswitch61 "Ped Gate Wall Lights" <light> (All,Gf,GfOut,GfGardFront)                 [Light] {channel="enocean:centralCommand:ftdig:gcc61:generalSwitch"} 
+Switch gswitch62 "Perimeter Wall + Spikes Lights"  <light> (All,Gf,GfOut,GfGardFront)                 [Light] {channel="enocean:centralCommand:ftdig:gcc62:generalSwitch"} 
+
+Switch gswitch63 "BED 1 Lamp Left "  <poweroutlet_uk> (All,Gf,GfBed1) [Light] {channel="enocean:centralCommand:ftdig:gcc63:generalSwitch"} 
+Switch gswitch64 "BED 1 Lamp Right " <poweroutlet_uk> (All,Gf,GfBed1) [Light] {channel="enocean:centralCommand:ftdig:gcc64:generalSwitch"} 
+
+Switch gswitch65 "BED 2 Lamp Left "  <poweroutlet_uk> (All,Gf,GfBed2) [Light] {channel="enocean:centralCommand:ftdig:gcc65:generalSwitch"} 
+Switch gswitch66 "BED 2 Lamp Right " <poweroutlet_uk> (All,Gf,GfBed2) [Light] {channel="enocean:centralCommand:ftdig:gcc66:generalSwitch"} 
+
+Switch gswitch67 "BED 2 Lamp office" <poweroutlet_uk> (All,Gf,GfBed2) [Light] {channel="enocean:centralCommand:ftdig:gcc67:generalSwitch"} 
+Switch gswitch68 "Living Lamp"      <poweroutlet_uk> (All,Gf,GfLiv)  [Light] {channel="enocean:centralCommand:ftdig:gcc68:generalSwitch"} 
+
+Switch gswitch69 "Bath 2 Towel"  <radiator> (All,Gf,GfBath2)          [HVAC] {channel="enocean:centralCommand:ftdig:gcc69:generalSwitch"} 
+Switch gswitch70 "Bath 1 Towel " <radiator> (All,Gf,GfBath1)          [HVAC] {channel="enocean:centralCommand:ftdig:gcc70:generalSwitch"} 
+
+Switch gswitch71 "X3"  <radiator> (All,Spare)                      [HVAC] {channel="enocean:centralCommand:ftdig:gcc71:generalSwitch"} 
+Switch gswitch72 "X4"  <radiator> (All,Spare)                      [HVAC] {channel="enocean:centralCommand:ftdig:gcc72:generalSwitch"} 
+//FSB14
+Rollershutter gmotor1 "BED 1 [%s]" (All,Gf,GfBed1)                    [Blinds] {channel="enocean:rollershutter:ftdig:grh1:rollershutter"}
+Rollershutter gmotor2 "BED 1 B[%s]" (All,Spare)                    [Blinds] {channel="enocean:rollershutter:ftdig:grh2:rollershutter"}
+
+Rollershutter gmotor3 "BED 2 A[%s]" (All,Spare)                    [Blinds] {channel="enocean:rollershutter:ftdig:grh3:rollershutter"}
+Rollershutter gmotor4 "BED 2  [%s]" (All,Gf,GfBed2)                [Blinds] {channel="enocean:rollershutter:ftdig:grh4:rollershutter"}
+
+Rollershutter gmotor5 "Living Left [%s]" (All,Gf,GfLiv)                    [Blinds] {channel="enocean:rollershutter:ftdig:grh5:rollershutter"}
+Rollershutter gmotor6 "Living Right [%s]" (All,Gf,GfLiv)                    [Blinds] {channel="enocean:rollershutter:ftdig:grh6:rollershutter"}
+
+Rollershutter gmotor7 "Dining Left [%s]" (All,Gf,GfDin)                    [Blinds] {channel="enocean:rollershutter:ftdig:grh7:rollershutter"}
+Rollershutter gmotor8 "Dining Right [%s]" (All,Gf,GfDin)                    [Blinds] {channel="enocean:rollershutter:ftdig:grh8:rollershutter"}
+//FMZ AND FTN
+
+//Switch ghotwatermech "HOT WATER Mech" <water> (All,Gf,GfBed1,GfBed2)    [HVAC] {channel="enocean:genericThing:ftdig:gfmz1:genericSwitch",autoupdate="true"}
+//Switch grecwater "Rec Water" <pump> (All,Gf,GfBed1,GfBed2)              [HVAC] {channel="enocean:genericThing:ftdig:gftn1:genericSwitch",autoupdate="true"}
+
+
+
+Switch ghotwatermech "GF HOT WATER Mech"      <water> (All,Spare)            [HVAC] {channel="enocean:classicDevice:ftdig:gfmz1:gfmzcontrol1",channel="enocean:classicDevice:ftdig:gfmz1:gfmzstatus1"}//,autoupdate="true"}
+Switch grecwater "GF Rec Water" <pump> (All,Gf,GfBath1,GfBath2,Gf1Bath,Gf2Bath) [HVAC] {channel="enocean:classicDevice:ftdig:gftn1:gftncontrol1",channel="enocean:classicDevice:ftdig:gftn1:gftnstatus1"}//,autoupdate="true"}
+
+//Aparment G2
+//Sensor
+Switch g2Pir1 "APT 3 BATH [MAP(pir.map):%s]" <motion>  (All,Gf,Sensors,Gf2Bath) [MotionDetector] {channel="enocean:lightTemperatureOccupancySensor:ftdig:g2pir1:motionDetection"}
+Number g2luxlev1 "APT 3 BATH [%.1f lx]" <sunrise> (All,Gf,Sensors,Gf2Bath) {channel="enocean:lightTemperatureOccupancySensor:ftdig:g2pir1:illumination"}
+
+//Dimmer
+Dimmer g2dimmer1  "Bed Spot [%.0f ]" <slider> (All,Gf,Gf2Bed)  [Light]   {channel="enocean:centralCommand:ftdig:g2dm1:dimmer"}
+Dimmer g2dimmer2 "W.C Spot [%.0f ]" <slider> (All,Gf,Gf2Bath)  [Light]   {channel="enocean:centralCommand:ftdig:g2dm2:dimmer"}
+//ON-OFF FSR14-4X
+Switch g2switch1  "Bed 2 LED" <light> (All,Gf,Gf2Bed)       [Light] {channel="enocean:centralCommand:ftdig:g2cc01:generalSwitch"} 
+Switch g2switch2  "Office Spot" <light> (All,Gf,Gf2Bed)        [Light] {channel="enocean:centralCommand:ftdig:g2cc02:generalSwitch"} 
+Switch g2switch3  "G2/FSR4X-1C" <light> (All,Spare)            [Light] {channel="enocean:centralCommand:ftdig:g2cc03:generalSwitch"} 
+Switch g2switch4  "G2/FSR4X-1D" <light> (All,Spare)            [Light] {channel="enocean:centralCommand:ftdig:g2cc04:generalSwitch"} 
+
+Switch g2switch5  "G2/FSR4X-2A" <light> (All,Spare)            [Light] {channel="enocean:centralCommand:ftdig:g2cc05:generalSwitch"} 
+Switch g2switch6  "Outdoor Front Wall APT 3" <light> (All,Gf,Gf2Bed,GfOut,GfGardBack) [Light] {channel="enocean:centralCommand:ftdig:g2cc06:generalSwitch"} 
+Switch g2switch7  "Outdoor side Wall APT 3" <light> (All,Gf,Gf2Bed,GfOut,GfGardBack)            [Light] {channel="enocean:centralCommand:ftdig:g2cc07:generalSwitch"} 
+Switch g2switch8  "G2/FSR4X-2D" <light> (All,Spare)            [Light] {channel="enocean:centralCommand:ftdig:g2cc08:generalSwitch"} 
+// ON-OFF FSR14-2X
+Switch g2switch9  "Fan Bed SP1" <fan> (All,Gf,Gf2Bed)          [Light] {channel="enocean:centralCommand:ftdig:g2cc09:generalSwitch"} 
+Switch g2switch10 "Fan Bed SP2" <fan> (All,Spare)          [Light] {channel="enocean:centralCommand:ftdig:g2cc10:generalSwitch"} 
+
+Switch g2switch11 "BED Lamp Left" <poweroutlet_uk> (All,Gf,Gf2Bed)   [Light] {channel="enocean:centralCommand:ftdig:g2cc11:generalSwitch"} 
+Switch g2switch12 "Bed Lamp Right "<poweroutlet_uk> (All,Gf,Gf2Bed)  [Light] {channel="enocean:centralCommand:ftdig:g2cc12:generalSwitch"} 
+
+Switch g2switch13 "Office LAPT"<poweroutlet_uk> (All,Spare)          [Light] {channel="enocean:centralCommand:ftdig:g2cc13:generalSwitch"} 
+Switch g2switch14 "Bath Towel"  <radiator> (All,Gf,Gf2Bath)          [HVAC] {channel="enocean:centralCommand:ftdig:g2cc14:generalSwitch"} 
+//FSB14
+Rollershutter g2motor1 "BED [%s]" (All,Gf,Gf2Bed)                  [Blinds] {channel="enocean:rollershutter:ftdig:g2rh1:rollershutter"}
+Rollershutter g2motor2 "BED B [%s]" (All,Spare)                  [Blinds] {channel="enocean:rollershutter:ftdig:g2rh2:rollershutter"}
+

@@ -1,0 +1,19 @@
+//https://community.openhab.org/t/astro-items-sitemap-map-binding-example/21155
+Group Astro <sun_clouds> (W66a)
+
+//DateTime    Current_DateTime     "Today [%1$tA, %1$td.%1$tm.%1$tY]"               <clock> (Astro) {channel="ntp:ntp:London:dateTime"}
+//
+DateTime    Sunset_Time          "Sunset [%1$tH:%1$tM]"                            <sun>    (Astro) {channel="astro:sun:home:set#start"}
+DateTime    Sunrise_Time         "Sunrise [%1$tH:%1$tM]"                           <sun>    (Astro) {channel="astro:sun:home:rise#end"}
+//DateTime    Evening_Time         "Evening [%1$tH:%1$tM]"                                  (Astro) {channel="astro:sun:minus90:set#start"}
+//
+String      Day_Phase            "Phase of Day [%s]"                                        (Astro) {channel="astro:sun:home:phase#name"}
+Switch      Night_State          "Night"                                                    (Astro)
+//
+String      Season_Name          "Season [%s]"                                              (Astro) {channel="astro:sun:home:season#name"}
+String      Zodiac_Sign          "Zodiac [%s]"                      <zodiac>                (Astro) {channel="astro:sun:home:zodiac#sign"}
+Number      Sun_Elevation        "Sun Elevation [%.1f °]"                          <sun>    (Astro) {channel="astro:sun:home:position#elevation"}
+Number      Moon_Elevation       "Moon Elevation [%.1f °]"                         <moon>   (Astro) {channel="astro:moon:home:position#elevation"}
+String      Moon_Phase           "Moon Phase [%s]"                  <moon>                  (Astro) {channel="astro:moon:home:phase#name"}
+DateTime    Moon_Next_Full       "Next Full Moon [%1$td.%1$tm.%1$tY, %1$tH:%1$tM]" <moon>   (Astro) {channel="astro:moon:home:phase#full"}
+DateTime    Moon_Next_New        "Next New Moon [%1$td.%1$tm.%1$tY, %1$tH:%1$tM]"  <moon>   (Astro) {channel="astro:moon:home:phase#new"}

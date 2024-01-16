@@ -1,0 +1,143 @@
+var Timer gPir1Timer = null
+var Timer gPir2Timer = null
+var Timer g2Pir1Timer = null
+var Timer g1Pir1Timer = null
+var luxLevel = 300
+
+
+/*PIR 1 IS IN THE GROUND FLOOR MAIN APARMENT BATH 1 */
+rule "PIR 1 Trigger off to on"
+  when
+    Item gPir1 changed from OFF to ON
+  then
+    if(gPir1Timer !==null){
+          gPir1Timer.cancel()
+          logInfo("RULE", "1 CANCEL TIMER")
+    }
+    var durationState = (timerDurgPir1.state as Number).intValue
+    if(gluxlev1.state< luxLevel && durationState!=0 ){
+        gdimmer1.sendCommand(50)
+
+    }
+end
+rule "PIR 1 Trigger ON to OFF"
+  when
+    Item gPir1 changed from ON to OFF
+  then
+    var durationState = (timerDurgPir1.state as Number).intValue
+    if(durationState !=0 ){
+        if(gPir1Timer === null){
+        gPir1Timer = createTimer(now.plusMinutes(durationState), [ |
+            gdimmer1.sendCommand(OFF)
+            gPir1Timer = null       
+        ])
+        }
+        else{
+            gPir1Timer.reschedule(now.plusMinutes(durationState))
+        }
+    }
+end
+
+/*PIR 2 IS IN THE GROUND FLOOR MAIN APARMENT BATH 2 */
+rule "PIR 2 Trigger off to on"
+  when
+    Item gPir2 changed from OFF to ON
+  then
+      if(gPir2Timer !==null){
+          gPir2Timer.cancel()
+          logInfo("RULE", "1 CANCEL TIMER")
+    }
+    var durationState = (timerDurgPir2.state as Number).intValue
+    if(gluxlev2.state< luxLevel && durationState!=0 ){
+        gdimmer5.sendCommand(50)
+        }
+end
+
+rule "PIR 2 Trigger ON to OFF"
+  when
+    Item gPir2 changed from ON to OFF
+  then
+    var durationState = (timerDurgPir2.state as Number).intValue
+    if(durationState!=0 ){
+        if(gPir2Timer === null){
+        gPir2Timer = createTimer(now.plusMinutes(durationState), [ |
+            gdimmer5.sendCommand(OFF)
+            gPir2Timer = null       
+        ])
+        }
+        else{
+            gPir2Timer.reschedule(now.plusMinutes(durationState))
+        }
+    }
+end
+
+
+
+/*APT 3 PIR 1 IS IN THE GROUND FLOOR MAIN APARMENT 3 BATH */
+rule "APT 3 PIR 1 Trigger off to on"
+  when
+    Item g2Pir1 changed from OFF to ON
+  then
+      if(g2Pir1Timer !==null){
+          g2Pir1Timer.cancel()
+          logInfo("RULE", "1 CANCEL TIMER")
+    }
+    var durationState = (timerDurgPir3.state as Number).intValue
+    if(g2luxlev1.state< luxLevel && durationState!=0 ){
+        g2dimmer2.sendCommand(50)
+    }
+end
+
+rule "APT 3 PIR 1 Trigger ON to OFF"
+  when
+    Item g2Pir1 changed from ON to OFF
+  then
+  
+    var durationState = (timerDurgPir3.state as Number).intValue
+    if(durationState!=0 ){
+        if(g2Pir1Timer === null){
+            g2Pir1Timer = createTimer(now.plusMinutes(durationState), [ |
+            g2dimmer2.sendCommand(OFF)
+            g2Pir1Timer = null       
+        ])
+        }
+        else{
+            g2Pir1Timer.reschedule(now.plusMinutes(durationState))
+        }
+    }
+end
+
+/*APT 2 PIR 1 IS IN THE GROUND FLOOR MAIN APARMENT 2 BATH */
+
+rule "APT 2 PIR 1 Trigger off to on"
+  when
+    Item g1Pir1 changed from OFF to ON
+  then
+        if(g1Pir1Timer !==null){
+          g1Pir1Timer.cancel()
+          logInfo("RULE", "1 CANCEL TIMER")
+    }
+    var durationState = (timerDurgPir4.state as Number).intValue
+    if(g1luxlev1.state< luxLevel && durationState!=0 ){
+        g1dimmer2.sendCommand(50)
+    }
+
+end
+
+rule "APT 2 PIR 1 Trigger ON to OFF"
+  when
+    Item g1Pir1 changed from ON to OFF
+  then
+    var durationState = (timerDurgPir4.state as Number).intValue
+    if(durationState!=0 ){
+        if(g1Pir1Timer === null){
+            g1Pir1Timer = createTimer(now.plusMinutes(durationState), [ |
+            g1dimmer2.sendCommand(OFF)
+            g1Pir1Timer = null       
+        ])
+        }
+        else{
+            g1Pir1Timer.reschedule(now.plusMinutes(durationState))
+        }
+    }
+end

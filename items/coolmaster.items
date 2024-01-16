@@ -1,0 +1,42 @@
+
+Switch AC1On     "Kitchen AC1 ON/OFF" (AcsGF)                                                    [HVAC] { channel="remoteopenhab:server:ohff:AC1On"}
+String AC1Mode   "Kitchen AC1 Mode" <snow> (AcsGF)                                               [HVAC] { channel="remoteopenhab:server:ohff:AC1Mode" }
+Number AC1Temp   "Kitchen AC1 Temperature [%.1f °C]"    <temperature>  (AcsGF)                   [HVAC] { channel="remoteopenhab:server:ohff:AC1Temp" }
+Number AC1Set    "Kitchen AC1 Set Point Temperature [%.1f °C]" <temperature>    (AcsGF)          [HVAC] { channel="remoteopenhab:server:ohff:AC1Set" }
+String AC1Fan    "Kitchen AC1 Fan" <fan>  (AcsGF)                                                [HVAC] { channel="remoteopenhab:server:ohff:AC1Fan" }
+
+Switch AC2On     "Living AC2 ON/OFF" (AcsGF)                                                    [HVAC] { channel="remoteopenhab:server:ohff:AC2On"}
+String AC2Mode   "Living AC2 Mode" <snow> (AcsGF)                                               [HVAC] { channel="remoteopenhab:server:ohff:AC2Mode" }
+Number AC2Temp   "Living AC2 Temperature [%.1f °C]"    <temperature>  (AcsGF)                   [HVAC] { channel="remoteopenhab:server:ohff:AC2Temp" }
+Number AC2Set    "Living AC2 Set Point Temperature [%.1f °C]" <temperature>    (AcsGF)          [HVAC] { channel="remoteopenhab:server:ohff:AC2Set" }
+String AC2Fan    "Living AC2 Fan" <fan>  (AcsGF)                                                [HVAC] { channel="remoteopenhab:server:ohff:AC2Fan" }
+/*
+Switch AC3On     "AC3 ON/OFF" (AcsGF)                                                    [HVAC] { channel="remoteopenhab:server:ohff:AC3On"}
+String AC3Mode   "AC3 Mode" <snow> (AcsGF)                                               [HVAC] { channel="remoteopenhab:server:ohff:AC3Mode" }
+Number AC3Temp   "AC3 Temperature [%.1f °C]"    <temperature>  (AcsGF)                   [HVAC] { channel="remoteopenhab:server:ohff:AC3Temp" }
+Number AC3Set    "AC3 Set Point Temperature [%.1f °C]" <temperature>    (AcsGF)          [HVAC] { channel="remoteopenhab:server:ohff:AC3Set" }
+String AC3Fan    "AC3 Fan" <fan>  (AcsGF)                                                [HVAC] { channel="remoteopenhab:server:ohff:AC3Fan" }
+*/
+Switch AC4On     "APT 2 Living AC4 ON/OFF" (AcsGF)                                                    [HVAC] { channel="remoteopenhab:server:ohff:AC4On"}
+String AC4Mode   "APT 2 Living AC4 Mode" <snow> (AcsGF)                                               [HVAC] { channel="remoteopenhab:server:ohff:AC4Mode" }
+Number AC4Temp   "APT 2 Living AC4 Temperature [%.1f °C]"    <temperature>  (AcsGF)                   [HVAC] { channel="remoteopenhab:server:ohff:AC4Temp" }
+Number AC4Set    "APT 2 Living AC4 Set Point Temperature [%.1f °C]" <temperature>    (AcsGF)          [HVAC] { channel="remoteopenhab:server:ohff:AC4Set" }
+String AC4Fan    "APT 2 Living AC4 Fan" <fan>  (AcsGF)                                                [HVAC] { channel="remoteopenhab:server:ohff:AC4Fan" }
+/*
+Switch AC5On     "AC5 ON/OFF" (AcsGF)                                                    [HVAC] { channel="remoteopenhab:server:ohff:AC5On"}
+String AC5Mode   "AC5 Mode" <snow> (AcsGF)                                               [HVAC] { channel="remoteopenhab:server:ohff:AC5Mode" }
+Number AC5Temp   "AC5 Temperature [%.1f °C]"    <temperature>  (AcsGF)                   [HVAC] { channel="remoteopenhab:server:ohff:AC5Temp" }
+Number AC5Set    "AC5 Set Point Temperature [%.1f °C]" <temperature>    (AcsGF)          [HVAC] { channel="remoteopenhab:server:ohff:AC5Set" }
+String AC5Fan    "AC5 Fan" <fan>  (AcsGF)                                                [HVAC] { channel="remoteopenhab:server:ohff:AC5Fan" }
+*/
+Switch AC6On     "APT 3 BED AC6 ON/OFF" (AcsGF)                                                    [HVAC] { channel="remoteopenhab:server:ohff:AC6On"}
+String AC6Mode   "APT 3 BED AC6 Mode" <snow> (AcsGF)                                               [HVAC] { channel="remoteopenhab:server:ohff:AC6Mode" }
+Number AC6Temp   "APT 3 BED AC6 Temperature [%.1f °C]"    <temperature>  (AcsGF)                   [HVAC] { channel="remoteopenhab:server:ohff:AC6Temp" }
+Number AC6Set    "APT 3 BED AC6 Set Point Temperature [%.1f °C]" <temperature>    (AcsGF)          [HVAC] { channel="remoteopenhab:server:ohff:AC6Set" }
+String AC6Fan    "APT 3 BED AC6 Fan" <fan>  (AcsGF)                                                [HVAC] { channel="remoteopenhab:server:ohff:AC6Fan" }
+
+Switch AC7On     "APT 1 BED 2 AC7 ON/OFF" (AcsGF)                                                    [HVAC] { channel="remoteopenhab:server:ohff:AC7On"}
+String AC7Mode   "APT 1 BED 2 AC7 Mode" <snow> (AcsGF)                                               [HVAC] { channel="remoteopenhab:server:ohff:AC7Mode" }
+Number AC7Temp   "APT 1 BED 2 AC7 Temperature [%.1f °C]"    <temperature>  (AcsGF)                   [HVAC] { channel="remoteopenhab:server:ohff:AC7Temp" }
+Number AC7Set    "APT 1 BED 2 AC7 Set Point Temperature [%.1f °C]" <temperature>    (AcsGF)          [HVAC] { channel="remoteopenhab:server:ohff:AC7Set" }
+String AC7Fan    "APT 1 BED 2 AC7 Fan" <fan>  (AcsGF)                                                [HVAC] { channel="remoteopenhab:server:ohff:AC7Fan" }

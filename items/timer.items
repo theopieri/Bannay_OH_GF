@@ -1,0 +1,20 @@
+Number timerDurgPir1    "Duration PIR APT 1 BATH 1" <time>  (param)
+
+Number timerDurgPir2    "Duration PIR APT 1 BATH 2" <time>  (param)
+
+Number timerDurgPir3    "Duration PIR APT 3 BATH 1" <time>  (param)
+
+Number timerDurgPir4    "Duration PIR APT 2 BATH 1" <time>  (param)
+
+//Virual actor 
+Switch vaOutdoorLights "Disable/Enable GF Outdoor Lights" <Light> (param)
+//Number timerAutoManual1 "Timer1 Auto/Manual" <time>  (Timer)
+//String timerStatus1     "Timer1 Status Of Timer" <time>  (Timer)
+Number timerHours1      "Timer Hour GF Outdoor Pool and Back House" <time>  (Timer)
+Number timerMinues1     "Timer Minues GF Outdoor Pool and Back House" <time>  (Timer)
+
+
+Number timerHours2      "Timer Hour GF Parking and Front" <time>  (Timer)
+Number timerMinues2     "Timer Minues GF Parking and Front" <time>  (Timer)
+
+Number vaRecWaterCancel "Frequency of GF Rec Water" <pump> (param)

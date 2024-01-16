@@ -1,0 +1,60 @@
+
+rule "Rec_timer_Evrey_15_mis"
+//Rules run evrey 15 mins in order to update 
+when
+	//Runs every 15
+    Time cron "0 */15 * * * ?" 
+then
+    var RecWaterDuration = (vaRecWaterCancel.state as Number).intValue
+    if(RecWaterDuration==15){
+      if( now.getHour() >5 && now.getHour()<23)
+      {
+        logInfo("RULE", "REC. WATER GF ON on 15 mins")
+        grecwater.sendCommand(ON)
+        createTimer(now.plusMinutes(6), [ |
+        grecwater.sendCommand(OFF)
+        ])
+      }  
+    }
+
+end
+
+rule "Rec_timer_Evrey_30_mis"
+//Rules run evrey 30 mins in order to update 
+when
+	//Runs every 30
+    Time cron "0 */30 * * * ?" 
+then
+    var RecWaterDuration = (vaRecWaterCancel.state as Number).intValue
+    if(RecWaterDuration==30){
+      if( now.getHour() >5 && now.getHour()<23)
+      {
+        logInfo("RULE", "REC. WATER GF ON on 30 mins")
+        grecwater.sendCommand(ON)
+        createTimer(now.plusMinutes(6), [ |
+        grecwater.sendCommand(OFF)
+        ])
+      }  
+    }
+
+end
+
+rule "Rec_timer_Evrey_1 hour"
+//Rules run evrey 1 hour in order to update 
+when
+	//Runs every 1 hour
+    Time cron " 0 0 */1 * * ?" 
+then
+    var RecWaterDuration = (vaRecWaterCancel.state as Number).intValue
+    if(RecWaterDuration==60){
+      if( now.getHour() >5 && now.getHour()<23)
+      {
+        logInfo("RULE", "REC. WATER GF ON on 1 hour")
+        grecwater.sendCommand(ON)
+        createTimer(now.plusMinutes(6), [ |
+        grecwater.sendCommand(OFF)
+        ])
+      }  
+    }
+
+end

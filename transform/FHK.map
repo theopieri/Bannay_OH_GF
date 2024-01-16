@@ -1,0 +1,8 @@
+genericSwitch|70=OnOffType|ON
+genericSwitch|50=OnOffType|OFF
+genericSwitch|30=OnOffType|ON
+genericSwitch|10=OnOffType|OFF
+genericSwitch|0=70
+genericSwitch|1=50
+genericSwitch|2=30
+genericSwitch|3=10
